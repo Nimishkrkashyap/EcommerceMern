@@ -20,7 +20,7 @@ const Footer = () => {
 
                 <p>Copyrights 2024 &copy; Nimish Kumar</p>
             </div>
-            <div className='righttFooter'>
+            <div className='rightFooter'>
                 <h4>Follow Us</h4>
                 <a href='https://mindmatrix.io/'>Instagram</a>
                 <a href='https://mindmatrix.io/'>Facebook</a>
