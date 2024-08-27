@@ -8,15 +8,9 @@ import { getProduct } from '../../actions/productAction.js'
 import { useSelector, useDispatch } from 'react-redux'
 
 
-const product = {
-    name: "Blue Tshirt",
-    images: [{ url: "https://i.ibb.co/DRST11n/1.webp" }],
-    price: "₹3000",
-    id: "abhishek"
-};
-
 const Home = () => {
     const dispatch = useDispatch()
+    const { loading, error, products, productsCount} = useSelector((state) => state.products)
 
     useEffect(() => {
         dispatch(getProduct())
@@ -38,20 +32,9 @@ const Home = () => {
             <h2 className='homeHeading'>Featured Products</h2>
 
             <div className='container' id='container'>
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
+                {products && products.map(product => (
+                    <Product product={product} key={product._id}/>
+                ))}
             </div>
         </>
     )
