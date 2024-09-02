@@ -24,3 +24,15 @@
     box-sizing: border-box;
     height: 8%;
 }
+.searchBox > input[type="submit"]{
+    height: 8%;
+    border-radius: 0%;
+    background-color: tomato;
+    border: none;
+    padding: 1vmax;
+    width: 10%;
+    font: 300 1.1vmax "Roboto";
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+}
