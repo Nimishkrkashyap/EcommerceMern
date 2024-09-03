@@ -33,7 +33,7 @@ const Header = () => {
                         <div>
                             <Link to='/search' onClick={handleHide}><FaSearch /></Link>
                             <FaShoppingCart />
-                            <BiSolidUserRectangle />
+                            <Link to='/login'  onClick={handleHide}><BiSolidUserRectangle /></Link>
                         </div>
                     </div>
                 </>

@@ -14,7 +14,7 @@ const Home = () => {
     const alert = useAlert()
     const dispatch = useDispatch()
     const { loading, error, products, productsCount } = useSelector((state) => state.products)
-    console.log(productsCount)
+
     useEffect(() => {
         if(error){
             alert.error(error)

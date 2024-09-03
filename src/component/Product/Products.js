@@ -7,6 +7,8 @@ import ProductCard from '../Home/ProductCard'
 import { useAlert } from "react-alert"
 import { useParams } from 'react-router-dom'
 import Pagination from 'react-js-pagination'
+import { Slider } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
 
 
 
@@ -40,7 +42,12 @@ const Products = () => {
             ))}
           </div>
 
-          <div className='paginationBox'>
+          <div className='filterBox'>
+            <Typography>Price</Typography>
+          </div>
+
+          {resultPerPage < productsCount && (
+            <div className='paginationBox'>
             <Pagination
               activePage={currentPage}
               itemsCountPerPage={resultPerPage}
@@ -56,6 +63,7 @@ const Products = () => {
               activeLinkClass='pageLinkActive'
             />
           </div>
+          )}
         </>
       )}
     </>
